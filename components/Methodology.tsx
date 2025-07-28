@@ -1,6 +1,6 @@
 
 import React, { useRef } from 'react';
-import Icon from './icons/Icon';
+import { Target } from 'lucide-react';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 
 interface MethodologyCardProps {
@@ -34,8 +34,8 @@ const Methodology: React.FC = () => {
 
   return (
     <section ref={ref} className={`mt-12 text-center transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-      <h3 className="text-2xl sm:text-3xl font-bold text-center text-blue-700 mb-6 flex items-center justify-center gap-2">
-        <Icon name="Goal" className="w-8 h-8" />
+      <h3 className="text-2xl sm:text-3xl font-bold text-center text-indigo-700 mb-6 flex items-center justify-center gap-2">
+        <Target className="w-8 h-8" />
         Metodología
       </h3>
       <div className="flex flex-col md:flex-row justify-center gap-4">

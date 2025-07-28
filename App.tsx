@@ -1,11 +1,12 @@
 
 import { useState } from 'react';
-import { modules, materials } from './constants';
 import Header from './components/Header';
 import KeyInfo from './components/KeyInfo';
+import CountdownTimer from './components/CountdownTimer';
 import AccordionItem from './components/AccordionItem';
 import Materials from './components/Materials';
 import Methodology from './components/Methodology';
+import { modules, materials } from './constants';
 
 function App() {
   const [openModuleId, setOpenModuleId] = useState<string | null>(null);
@@ -17,9 +18,8 @@ function App() {
   return (
     <div className="container mx-auto p-4 sm:p-6 md:p-8 max-w-5xl">
         <Header />
-        <KeyInfo />
         
-        <div id="modules-accordion" className="space-y-4">
+        <div id="modules-accordion" className="space-y-4 mb-12">
             {modules.map((module, index) => (
             <AccordionItem
                 key={module.id}
@@ -31,8 +31,19 @@ function App() {
             ))}
         </div>
         
-        <Materials materials={materials} />
-        <Methodology />
+        <CountdownTimer />
+        
+        <div className="mb-12">
+          <KeyInfo />
+        </div>
+        
+        <div className="mb-12">
+          <Materials materials={materials} />
+        </div>
+        
+        <div className="mb-12">
+          <Methodology />
+        </div>
     </div>
   );
 }
