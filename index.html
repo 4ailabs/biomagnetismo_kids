@@ -55,6 +55,13 @@
         -moz-osx-font-smoothing: grayscale;
         touch-action: manipulation;
         overflow-x: hidden;
+        position: relative;
+      }
+      
+      /* Contenedor principal */
+      .container {
+        position: relative;
+        z-index: 1;
       }
       
       /* Prevenir zoom en inputs en iOS */
@@ -635,9 +642,39 @@
         .countdown-header h3 {
           font-size: 1.25rem;
         }
+        
         .header {
           padding: 3rem 1rem 2rem 1rem;
           margin: 0 0 1rem 0;
+        }
+        
+        /* Arreglar encimamiento en móviles */
+        .module {
+          position: relative;
+          z-index: 1;
+          margin-bottom: 2rem;
+        }
+        
+        .module-section {
+          position: relative;
+          z-index: 2;
+        }
+        
+        /* Asegurar que el contenido expandido no se encime */
+        .module > div {
+          position: relative;
+          z-index: 3;
+        }
+        
+        /* Ajustar espaciado para evitar encimamiento */
+        #modules-accordion {
+          margin-top: 1rem;
+          margin-bottom: 2rem;
+        }
+        
+        /* Mejorar espaciado entre módulos */
+        .module + .module {
+          margin-top: 1.5rem;
         }
         
         .header h1 {
