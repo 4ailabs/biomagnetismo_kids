@@ -37,15 +37,7 @@ const KeyInfo: React.FC = () => {
           <div>
             <h3>Inversión</h3>
             <p>$1,200.00 MXN por clase</p>
-            <div style={{ 
-              background: '#fef3c7', 
-              padding: '0.5rem', 
-              borderRadius: '0.5rem', 
-              marginTop: '0.5rem',
-              fontSize: '0.875rem',
-              fontWeight: '600',
-              color: '#92400e'
-            }}>
+            <div className="discount-badge">
               ¡15% de descuento al pagar las 4 clases!
             </div>
           </div>
