@@ -3,13 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     
     <!-- SEO Meta Tags -->
     <title>Biomagnetismo Kids Workshop - Taller Especializado</title>
     <meta name="description" content="Taller especializado de Biomagnetismo para Conflictos Biológicos, Resonancia Familiar y Acompañamiento Vivencial por Etapas del Desarrollo Infantil" />
     <meta name="keywords" content="biomagnetismo, kids, workshop, conflictos biológicos, resonancia familiar, desarrollo infantil" />
     <meta name="author" content="Biomagnetismo Kids Workshop" />
+    
+    <!-- Mobile Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Biomagnetismo Kids">
+    <meta name="theme-color" content="#1e40af">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -44,17 +51,40 @@
         padding: 0;
         line-height: 1.6;
         color: #374151;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        touch-action: manipulation;
+        overflow-x: hidden;
+      }
+      
+      /* Prevenir zoom en inputs en iOS */
+      input, textarea, select {
+        font-size: 16px !important;
       }
       
       /* Estilos para el header */
       .header {
         background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
         border-radius: 0 0 2rem 2rem;
-        padding: 3rem 1rem;
+        padding: 4rem 1rem 3rem 1rem;
         text-align: center;
         color: white;
-        margin-bottom: 2rem;
+        margin: 0 0 2rem 0;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('https://images.unsplash.com/photo-1620912189868-3798944d712b?q=80&w=1974&auto=format&fit=crop') center/cover;
+        opacity: 0.1;
+        z-index: 0;
       }
       
       .header h1 {
@@ -65,6 +95,8 @@
         align-items: center;
         justify-content: center;
         gap: 1rem;
+        position: relative;
+        z-index: 1;
       }
       
       .header p {
@@ -72,6 +104,8 @@
         color: #dbeafe;
         max-width: 800px;
         margin: 0 auto;
+        position: relative;
+        z-index: 1;
       }
       
       /* Estilos para las tarjetas */
@@ -141,9 +175,11 @@
         border-left: 4px solid #8b5cf6;
         cursor: pointer;
         transition: all 0.3s ease;
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
       }
       
-      .module:hover {
+      .module:hover, .module:active {
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       }
@@ -183,27 +219,231 @@
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+        -webkit-tap-highlight-color: transparent;
       }
       
-      .contact a:hover {
-        text-decoration: underline;
+      .contact a:hover, .contact a:active {
+        background-color: #eff6ff;
+        transform: scale(1.05);
       }
       
-      /* Responsive */
+      /* Floating Action Button para móviles */
+      .fab {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        background: #3b82f6;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        z-index: 1000;
+        transition: all 0.3s ease;
+        -webkit-tap-highlight-color: transparent;
+        cursor: pointer;
+      }
+      
+      .fab:hover, .fab:active {
+        transform: scale(1.1);
+        box-shadow: 0 6px 16px rgba(59, 130, 246, 0.6);
+      }
+      
+      /* Pull to refresh indicator */
+      .pull-refresh {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1001;
+      }
+      
+      .pull-refresh.active {
+        transform: translateY(0);
+      }
+      
+      /* Mobile optimizations */
       @media (max-width: 768px) {
+        .header {
+          padding: 3rem 1rem 2rem 1rem;
+          margin: 0 0 1rem 0;
+        }
+        
         .header h1 {
           font-size: 2rem;
           flex-direction: column;
+          gap: 0.5rem;
+        }
+        
+        .header p {
+          font-size: 1rem;
+          padding: 0 0.5rem;
         }
         
         .info-grid {
           grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+        
+        .card {
+          padding: 1.5rem;
+          margin: 0 1rem 1.5rem 1rem;
+          border-radius: 0.75rem;
+        }
+        
+        .module {
+          margin: 0 1rem 1rem 1rem;
+          padding: 1.25rem;
+        }
+        
+        .module h2 {
+          font-size: 1.125rem;
+        }
+        
+        .fab {
+          bottom: 1.5rem;
+          right: 1.5rem;
+          width: 3rem;
+          height: 3rem;
+          font-size: 1.25rem;
+        }
+        
+        /* Mejorar touch targets */
+        .info-item {
+          padding: 0.5rem 0;
+        }
+        
+        .contact a {
+          padding: 1rem 2rem;
+          font-size: 1rem;
+        }
+      }
+      
+      /* Tablet optimizations */
+      @media (min-width: 769px) and (max-width: 1024px) {
+        .header h1 {
+          font-size: 2.5rem;
+        }
+        
+        .info-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      
+      /* Animaciones suaves para móviles */
+      @media (prefers-reduced-motion: no-preference) {
+        .module, .card, .fab {
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+      }
+      
+      /* Dark mode support */
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #1f2937;
+          color: #f9fafb;
+        }
+        
+        .card, .module {
+          background: #374151;
+          border-color: #4b5563;
+        }
+        
+        .info-item h3 {
+          color: #f9fafb;
+        }
+        
+        .info-item p, .module p {
+          color: #d1d5db;
         }
       }
     </style>
   </head>
   <body>
+    <div class="pull-refresh" id="pullRefresh"></div>
     <div id="root"></div>
+    
+    <!-- Floating Action Button -->
+    <div class="fab" id="fab" onclick="scrollToTop()">
+      ↑
+    </div>
+    
+    <script>
+      // Scroll to top functionality
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
+      
+      // Show/hide FAB based on scroll position
+      window.addEventListener('scroll', function() {
+        const fab = document.getElementById('fab');
+        if (window.scrollY > 300) {
+          fab.style.display = 'flex';
+        } else {
+          fab.style.display = 'none';
+        }
+      });
+      
+      // Pull to refresh functionality
+      let startY = 0;
+      let currentY = 0;
+      let pullDistance = 0;
+      const pullThreshold = 100;
+      
+      document.addEventListener('touchstart', function(e) {
+        if (window.scrollY === 0) {
+          startY = e.touches[0].clientY;
+        }
+      });
+      
+      document.addEventListener('touchmove', function(e) {
+        if (window.scrollY === 0) {
+          currentY = e.touches[0].clientY;
+          pullDistance = currentY - startY;
+          
+          if (pullDistance > 0 && pullDistance < pullThreshold) {
+            const pullRefresh = document.getElementById('pullRefresh');
+            pullRefresh.style.transform = `translateY(${Math.min(pullDistance / 2, 50)}px)`;
+          }
+        }
+      });
+      
+      document.addEventListener('touchend', function() {
+        if (pullDistance > pullThreshold) {
+          // Trigger refresh
+          location.reload();
+        }
+        
+        const pullRefresh = document.getElementById('pullRefresh');
+        pullRefresh.style.transform = 'translateY(-100%)';
+        pullDistance = 0;
+      });
+      
+      // Prevent zoom on double tap
+      let lastTouchEnd = 0;
+      document.addEventListener('touchend', function(event) {
+        const now = (new Date()).getTime();
+        if (now - lastTouchEnd <= 300) {
+          event.preventDefault();
+        }
+        lastTouchEnd = now;
+      }, false);
+    </script>
+    
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>
