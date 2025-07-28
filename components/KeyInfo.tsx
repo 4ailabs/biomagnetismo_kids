@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Calendar, Clock, Monitor, DollarSign, Phone } from 'lucide-react';
+import { Calendar, Clock, Monitor, DollarSign, MessageCircle } from 'lucide-react';
 
 const KeyInfo: React.FC = () => {
   return (
@@ -46,9 +46,9 @@ const KeyInfo: React.FC = () => {
       
       <div className="contact">
         <h3>Para más información:</h3>
-        <a href="tel:+525579076626">
-          <Phone size={20} />
-          +52 55 7907 6626
+        <a href="https://wa.me/+525579076626" target="_blank" rel="noopener noreferrer">
+          <MessageCircle size={20} />
+          WhatsApp: +52 55 7907 6626
         </a>
       </div>
     </div>
