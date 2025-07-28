@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { ChevronDown, Infinity, Sprout, BookOpen, Flame, Heart, Brain, Stethoscope, Target, Users, Eye, Lightbulb } from 'lucide-react';
-import Timeline from './Timeline';
 
 interface Module {
   id: string;
