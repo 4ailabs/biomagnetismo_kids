@@ -8,13 +8,54 @@ export const modules: ModuleData[] = [
     title: 'MÓDULO 1 - DÍA 1',
     subtitle: '"El Inicio Invisible: Cuando la Historia Empieza Antes de Nacer"',
     content: [
-      { title: 'Apertura Vivencial', points: ['Presentación del enfoque bioenergético infantil', 'Dinámica: "Mi historia antes de nacer"'] },
-      { title: 'Marco Teórico', points: ['Conflictos Biológicos Fundamentales: intrauterinos, estrés de nacimiento, falta de contacto.', 'Principios del biomagnetismo en la etapa perinatal.'] },
-      { title: 'Patologías de la Etapa', points: ['Enfermedades Comunes: Cólico, reflujo, ictericia, dermatitis, etc.', 'Enfermedades Exantemáticas: Citomegalovirus, herpes, rubeola congénita.', 'Pares Biomagnéticos Clave para 0-3 meses.'] },
-      { title: 'Protocolos Específicos', points: ['Protocolos para cólicos, reflujo, dermatitis, ictericia.', 'Modificaciones técnicas para bebés (intensidad, posición, tiempos).'] },
-      { title: 'Vivencia Terapéutica', points: ['Visualización guiada del proyecto sentido.', 'Exploración de la historia de nacimiento y emociones maternas.'] },
-      { title: 'Práctica Supervisada', points: ['Aplicación de protocolos, trabajo con diagramas y casos prácticos.'] },
-      { title: 'Reflexión Sistémica', description: '"No hay síntomas en el bebé que no hablen también de la madre"' }
+      { 
+        title: 'Apertura Vivencial', 
+        items: [
+          { title: 'Presentación del enfoque bioenergético infantil' },
+          { title: 'Dinámica: "Mi historia antes de nacer"' }
+        ]
+      },
+      { 
+        title: 'Marco Teórico', 
+        items: [
+          { title: 'Conflictos Biológicos Fundamentales: intrauterinos, estrés de nacimiento, falta de contacto.' },
+          { title: 'Principios del biomagnetismo en la etapa perinatal.' }
+        ]
+      },
+      { 
+        title: 'Patologías de la Etapa', 
+        items: [
+          { title: 'Enfermedades Comunes: Cólico, reflujo, ictericia, dermatitis, etc.' },
+          { title: 'Enfermedades Exantemáticas: Citomegalovirus, herpes, rubeola congénita.' },
+          { title: 'Pares Biomagnéticos Clave para 0-3 meses.' }
+        ]
+      },
+      { 
+        title: 'Protocolos Específicos', 
+        items: [
+          { title: 'Protocolos para cólicos, reflujo, dermatitis, ictericia.' },
+          { title: 'Modificaciones técnicas para bebés (intensidad, posición, tiempos).' }
+        ]
+      },
+      { 
+        title: 'Vivencia Terapéutica', 
+        items: [
+          { title: 'Visualización guiada del proyecto sentido.' },
+          { title: 'Exploración de la historia de nacimiento y emociones maternas.' }
+        ]
+      },
+      { 
+        title: 'Práctica Supervisada', 
+        items: [
+          { title: 'Aplicación de protocolos, trabajo con diagramas y casos prácticos.' }
+        ]
+      },
+      { 
+        title: 'Reflexión Sistémica', 
+        items: [
+          { title: '"No hay síntomas en el bebé que no hablen también de la madre"', description: 'Reflexión sobre la conexión madre-bebé' }
+        ]
+      }
     ]
   },
   {
@@ -23,12 +64,47 @@ export const modules: ModuleData[] = [
     title: 'MÓDULO 2 - DÍA 2',
     subtitle: '"Mi Cuerpo Antes de Mis Palabras"',
     content: [
-      { title: 'Marco Teórico', points: ['Conflictos Biológicos: separación, autonomía, no ser escuchado.', 'Desarrollo neurológico y formación del sistema inmunológico.'] },
-      { title: 'Patologías de la Etapa', points: ['Enfermedades Comunes: Otitis, bronquitis, parasitosis, alergias.', 'Enfermedades Exantemáticas: Sarampión, varicela, escarlatina.', 'Pares Biomagnéticos Clave para 3 meses - 5 años.'] },
-      { title: 'Protocolos Específicos', points: ['Protocolos para otitis, problemas respiratorios, alergias, dermatitis.', 'Técnicas de contención y manejo de niños no cooperativos.'] },
-      { title: 'Vivencia Terapéutica', points: ['Círculo narrativo: "Mis primeras veces".', 'Conexión entre emociones no procesadas y síntomas.'] },
-      { title: 'Práctica Supervisada', points: ['Aplicación de protocolos respiratorios y manejo de alergias.'] },
-      { title: 'Reflexión Sistémica', description: '"La piel llora lo que el niño no puede expresar"' }
+      { 
+        title: 'Marco Teórico', 
+        items: [
+          { title: 'Conflictos Biológicos: separación, autonomía, no ser escuchado.' },
+          { title: 'Desarrollo neurológico y formación del sistema inmunológico.' }
+        ]
+      },
+      { 
+        title: 'Patologías de la Etapa', 
+        items: [
+          { title: 'Enfermedades Comunes: Otitis, bronquitis, parasitosis, alergias.' },
+          { title: 'Enfermedades Exantemáticas: Sarampión, varicela, escarlatina.' },
+          { title: 'Pares Biomagnéticos Clave para 3 meses - 5 años.' }
+        ]
+      },
+      { 
+        title: 'Protocolos Específicos', 
+        items: [
+          { title: 'Protocolos para otitis, problemas respiratorios, alergias, dermatitis.' },
+          { title: 'Técnicas de contención y manejo de niños no cooperativos.' }
+        ]
+      },
+      { 
+        title: 'Vivencia Terapéutica', 
+        items: [
+          { title: 'Círculo narrativo: "Mis primeras veces".' },
+          { title: 'Conexión entre emociones no procesadas y síntomas.' }
+        ]
+      },
+      { 
+        title: 'Práctica Supervisada', 
+        items: [
+          { title: 'Aplicación de protocolos respiratorios y manejo de alergias.' }
+        ]
+      },
+      { 
+        title: 'Reflexión Sistémica', 
+        items: [
+          { title: '"La piel llora lo que el niño no puede expresar"', description: 'Reflexión sobre la expresión corporal' }
+        ]
+      }
     ]
   },
   {
@@ -37,12 +113,46 @@ export const modules: ModuleData[] = [
     title: 'MÓDULO 3 - DÍA 3',
     subtitle: '"Aprender Sin Perderme a Mí Mismo"',
     content: [
-        { title: 'Marco Teórico', points: ['Conflictos Biológicos Escolares: autoridad, pertenencia, rendimiento.', 'Impacto del sistema educativo y desarrollo de la autoestima.'] },
-        { title: 'Patologías de la Etapa', points: ['Enfermedades Comunes: Asma, TDAH, bruxismo, trastornos digestivos.', 'Enfermedades Exantemáticas: Rubéola, mononucleosis.', 'Pares Biomagnéticos Clave para 6-11 años.'] },
-        { title: 'Protocolos Específicos', points: ['Protocolos para TDAH, asma, trastornos digestivos, bruxismo.'] },
-        { title: 'Vivencia Terapéutica', points: ['Mapeo corporal emocional: "¿Dónde me duele aprender?".', 'Exploración de la mochila emocional escolar.'] },
-        { title: 'Práctica Supervisada', points: ['Aplicación de protocolos neurológicos y manejo del asma.'] },
-        { title: 'Reflexión Sistémica', description: '"El niño que enferma cuando no puede ser él mismo"' }
+      { 
+        title: 'Marco Teórico', 
+        items: [
+          { title: 'Conflictos Biológicos Escolares: autoridad, pertenencia, rendimiento.' },
+          { title: 'Impacto del sistema educativo y desarrollo de la autoestima.' }
+        ]
+      },
+      { 
+        title: 'Patologías de la Etapa', 
+        items: [
+          { title: 'Enfermedades Comunes: Asma, TDAH, bruxismo, trastornos digestivos.' },
+          { title: 'Enfermedades Exantemáticas: Rubéola, mononucleosis.' },
+          { title: 'Pares Biomagnéticos Clave para 6-11 años.' }
+        ]
+      },
+      { 
+        title: 'Protocolos Específicos', 
+        items: [
+          { title: 'Protocolos para TDAH, asma, trastornos digestivos, bruxismo.' }
+        ]
+      },
+      { 
+        title: 'Vivencia Terapéutica', 
+        items: [
+          { title: 'Mapeo corporal emocional: "¿Dónde me duele aprender?".' },
+          { title: 'Exploración de la mochila emocional escolar.' }
+        ]
+      },
+      { 
+        title: 'Práctica Supervisada', 
+        items: [
+          { title: 'Aplicación de protocolos neurológicos y manejo del asma.' }
+        ]
+      },
+      { 
+        title: 'Reflexión Sistémica', 
+        items: [
+          { title: '"El niño que enferma cuando no puede ser él mismo"', description: 'Reflexión sobre la autenticidad' }
+        ]
+      }
     ]
   },
   {
@@ -51,11 +161,42 @@ export const modules: ModuleData[] = [
     title: 'MÓDULO 4 - DÍA 4',
     subtitle: '"El Cuerpo Que Cambia, la Identidad Que Despierta"',
     content: [
-      { title: 'Marco Teórico', points: ['Conflictos Biológicos Adolescentes: identidad, lealtad familiar, sexualidad.', 'Impacto de redes sociales y cambios hormonales.'] },
-      { title: 'Patologías de la Etapa', points: ['Enfermedades Comunes: Acné, dolores menstruales, ansiedad, gastritis.', 'Enfermedades Exantemáticas: Herpes, virales atípicos.', 'Pares Biomagnéticos Clave para 12-15 años.'] },
-      { title: 'Protocolos Específicos', points: ['Protocolos para acné, trastornos menstruales, ansiedad, sueño.'] },
-      { title: 'Vivencia Terapéutica', points: ['Diálogo interno: "Mi cuerpo, mi historia, mi derecho a cambiar".', 'Ejercicio de escritura y reconocimiento de conflictos.'] },
-      { title: 'Integración Final y Cierre', points: ['Entrega de protocolos, tablas y diagramas completos.', 'Síntesis de conflictos, síntomas y microorganismos.', 'Reflexión sistémica final y entrega de certificados.'] }
+      { 
+        title: 'Marco Teórico', 
+        items: [
+          { title: 'Conflictos Biológicos Adolescentes: identidad, lealtad familiar, sexualidad.' },
+          { title: 'Impacto de redes sociales y cambios hormonales.' }
+        ]
+      },
+      { 
+        title: 'Patologías de la Etapa', 
+        items: [
+          { title: 'Enfermedades Comunes: Acné, dolores menstruales, ansiedad, gastritis.' },
+          { title: 'Enfermedades Exantemáticas: Herpes, virales atípicos.' },
+          { title: 'Pares Biomagnéticos Clave para 12-15 años.' }
+        ]
+      },
+      { 
+        title: 'Protocolos Específicos', 
+        items: [
+          { title: 'Protocolos para acné, trastornos menstruales, ansiedad, sueño.' }
+        ]
+      },
+      { 
+        title: 'Vivencia Terapéutica', 
+        items: [
+          { title: 'Diálogo interno: "Mi cuerpo, mi historia, mi derecho a cambiar".' },
+          { title: 'Ejercicio de escritura y reconocimiento de conflictos.' }
+        ]
+      },
+      { 
+        title: 'Integración Final y Cierre', 
+        items: [
+          { title: 'Entrega de protocolos, tablas y diagramas completos.' },
+          { title: 'Síntesis de conflictos, síntomas y microorganismos.' },
+          { title: 'Reflexión sistémica final y entrega de certificados.' }
+        ]
+      }
     ]
   }
 ];

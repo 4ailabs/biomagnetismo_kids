@@ -10,7 +10,10 @@ export interface ModuleData {
   icon: string;
   title: string;
   subtitle: string;
-  content: TimelineItemData[];
+  content: {
+    title: string;
+    items: TimelineItemData[];
+  }[];
 }
 
 export interface MaterialData {
