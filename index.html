@@ -267,30 +267,84 @@
       
       /* Módulos */
       .module {
-        background: white;
-        border-radius: 1rem;
-        padding: 1.5rem;
-        margin-bottom: 1rem;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-        border-left: 4px solid #8b5cf6;
+        background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+        border-radius: 1.5rem;
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         cursor: pointer;
-        transition: all 0.3s ease;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         -webkit-tap-highlight-color: transparent;
         user-select: none;
+        position: relative;
+        overflow: hidden;
+        border: 2px solid transparent;
+      }
+      
+      /* Colores de borde para cada módulo */
+      .module:nth-child(1) {
+        border-color: rgba(139, 92, 246, 0.2);
+      }
+      
+      .module:nth-child(2) {
+        border-color: rgba(16, 185, 129, 0.2);
+      }
+      
+      .module:nth-child(3) {
+        border-color: rgba(59, 130, 246, 0.2);
+      }
+      
+      .module:nth-child(4) {
+        border-color: rgba(245, 158, 11, 0.2);
       }
       
       .module:hover, .module:active {
-        transform: translateY(-4px) scale(1.01);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        border-left-width: 6px;
+        transform: translateY(-6px) scale(1.02);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+      }
+      
+      .module:nth-child(1):hover {
+        border-color: rgba(139, 92, 246, 0.4);
+        box-shadow: 0 12px 30px rgba(139, 92, 246, 0.1);
+      }
+      
+      .module:nth-child(2):hover {
+        border-color: rgba(16, 185, 129, 0.4);
+        box-shadow: 0 12px 30px rgba(16, 185, 129, 0.1);
+      }
+      
+      .module:nth-child(3):hover {
+        border-color: rgba(59, 130, 246, 0.4);
+        box-shadow: 0 12px 30px rgba(59, 130, 246, 0.1);
+      }
+      
+      .module:nth-child(4):hover {
+        border-color: rgba(245, 158, 11, 0.4);
+        box-shadow: 0 12px 30px rgba(245, 158, 11, 0.1);
       }
       
       .module h2 {
         transition: all 0.3s ease;
+        font-size: 1.5rem;
+        font-weight: 800;
+        letter-spacing: -0.025em;
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
       }
       
       .module:hover h2 {
-        transform: translateX(4px);
+        transform: translateX(6px);
+      }
+      
+      .module p {
+        color: #6b7280;
+        margin-bottom: 1rem;
+        font-style: italic;
+        font-size: 1.1rem;
+        line-height: 1.6;
       }
       
       .module h2 {
@@ -491,6 +545,76 @@
       
       .pull-refresh.active {
         transform: translateY(0);
+      }
+      
+      /* Estilos para las secciones del temario */
+      .module-section {
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border: 1px solid rgba(139, 92, 246, 0.1);
+        transition: all 0.3s ease;
+        position: relative;
+      }
+      
+      .module-section:hover {
+        background: rgba(255, 255, 255, 0.9);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(139, 92, 246, 0.1);
+      }
+      
+      .module-section h3 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: #1e293b;
+      }
+      
+      .module-section h3 svg {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+      
+      /* Timeline mejorado para el temario */
+      .module-timeline {
+        padding-left: 1.5rem;
+      }
+      
+      .module-timeline-item {
+        position: relative;
+        padding-bottom: 1rem;
+        padding-left: 1.5rem;
+        border-left: 2px solid rgba(139, 92, 246, 0.3);
+      }
+      
+      .module-timeline-item:last-child {
+        border-left: none;
+        padding-bottom: 0;
+      }
+      
+      .module-timeline-item::before {
+        content: '';
+        position: absolute;
+        left: -0.5rem;
+        top: 0.5rem;
+        width: 0.75rem;
+        height: 0.75rem;
+        background: #8b5cf6;
+        border-radius: 50%;
+        border: 2px solid white;
+        box-shadow: 0 2px 4px rgba(139, 92, 246, 0.3);
+      }
+      
+      .module-timeline-item p {
+        margin: 0;
+        color: #4b5563;
+        font-size: 0.95rem;
+        line-height: 1.5;
       }
       
       /* Mobile optimizations */

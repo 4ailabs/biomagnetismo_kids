@@ -71,24 +71,34 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ module, isOpen, onClick, 
       <p>"{module.subtitle}"</p>
       
       {isOpen && (
-        <div style={{ marginTop: '1rem' }}>
+        <div style={{ marginTop: '1.5rem' }}>
           {module.content.map((section, sectionIndex) => {
             const SectionIcon = getSectionIcon(section.title);
             return (
-              <div key={sectionIndex} style={{ marginBottom: '1.5rem' }}>
-                <h3 style={{ 
-                  fontWeight: '600', 
-                  fontSize: '1.125rem', 
-                  color: colors.title,
-                  marginBottom: '0.75rem',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '0.5rem'
-                }}>
-                  <SectionIcon size={20} />
+              <div key={sectionIndex} className="module-section">
+                <h3>
+                  <SectionIcon size={24} style={{ color: colors.title }} />
                   {section.title}
                 </h3>
-                <Timeline items={section.items} moduleColor={colors} />
+                <div className="module-timeline">
+                  {section.items.map((item, itemIndex) => (
+                    <div key={itemIndex} className="module-timeline-item">
+                      <p style={{ fontWeight: '500', color: colors.title }}>
+                        {item.title}
+                      </p>
+                      {item.description && (
+                        <p style={{ 
+                          fontSize: '0.9rem', 
+                          color: '#6b7280', 
+                          fontStyle: 'italic',
+                          marginTop: '0.25rem'
+                        }}>
+                          {item.description}
+                        </p>
+                      )}
+                    </div>
+                  ))}
+                </div>
               </div>
             );
           })}
