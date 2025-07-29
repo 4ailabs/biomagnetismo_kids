@@ -19,7 +19,11 @@ function App() {
     <div className="container mx-auto p-4 sm:p-6 md:p-8 max-w-5xl">
         <Header />
         
-        <div id="modules-accordion" className="space-y-4 mb-12">
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-center text-blue-600 mb-8">
+            Temario
+          </h2>
+          <div id="modules-accordion" className="space-y-4">
             {modules.map((module, index) => (
             <AccordionItem
                 key={module.id}
@@ -29,6 +33,7 @@ function App() {
                 index={index}
             />
             ))}
+          </div>
         </div>
         
         <CountdownTimer />
