@@ -755,25 +755,50 @@
         }
       }
       
-      /* Dark mode support */
-      @media (prefers-color-scheme: dark) {
-        body {
-          background-color: #1f2937;
-          color: #f9fafb;
-        }
-        
-        .card, .module {
-          background: #374151;
-          border-color: #4b5563;
-        }
-        
-        .info-item h3 {
-          color: #f9fafb;
-        }
-        
-        .info-item p, .module p {
-          color: #d1d5db;
-        }
+      /* Forzar modo claro siempre */
+      body {
+        background-color: #eff6ff !important;
+        color: #374151 !important;
+      }
+      
+      .card {
+        background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+        border-color: rgba(255, 255, 255, 0.8) !important;
+      }
+      
+      .module {
+        background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+        border-color: rgba(139, 92, 246, 0.2) !important;
+      }
+      
+      .info-item {
+        background: rgba(255, 255, 255, 0.7) !important;
+        border-color: rgba(59, 130, 246, 0.1) !important;
+      }
+      
+      .info-item h3 {
+        color: #1e293b !important;
+      }
+      
+      .info-item p {
+        color: #64748b !important;
+      }
+      
+      .module p {
+        color: #6b7280 !important;
+      }
+      
+      .module-section {
+        background: rgba(255, 255, 255, 0.7) !important;
+        border-color: rgba(139, 92, 246, 0.1) !important;
+      }
+      
+      .module-section h3 {
+        color: #1e293b !important;
+      }
+      
+      .module-timeline-item p {
+        color: #4b5563 !important;
       }
     </style>
   </head>
