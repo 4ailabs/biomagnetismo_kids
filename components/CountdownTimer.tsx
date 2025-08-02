@@ -10,8 +10,8 @@ const CountdownTimer: React.FC = () => {
   });
 
   useEffect(() => {
-    // Primera fecha del taller: 2 de Agosto de 2025
-    const targetDate = new Date('2025-08-02T10:00:00');
+    // Primera fecha del taller: 9 de Agosto de 2025
+    const targetDate = new Date('2025-08-09T10:00:00');
     
     const timer = setInterval(() => {
       const now = new Date().getTime();

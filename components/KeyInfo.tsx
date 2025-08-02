@@ -12,7 +12,7 @@ const KeyInfo: React.FC = () => {
           <Calendar className="icon" />
           <div>
             <h3>Fechas</h3>
-            <p>Sábados 2, 16, 30 de Agosto y 6 de Septiembre</p>
+            <p>Sábados 9, 23 de Agosto y 6, 13 de Septiembre</p>
           </div>
         </div>
         
